@@ -31,11 +31,27 @@ public void drawBranches(int x,int y, double branchLength, double angle)
 		drawBranches(endX2,endY2,branchLength,angle2);
 	}
 } 
-public void keyTyped()
+public void keyPressed()
 {
 	if(keyPressed == true && key == ' ')
 	{
 		myColor = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
 	}
 	redraw();
+	if(keyPressed == true && key == 'a')
+	{
+		branchAngle+=0.01;
+	}
+	else if(keyPressed == true && key == 'd')
+	{
+		branchAngle-=0.01;
+	}
+	else if(keyPressed == true && key == 'w')
+	{
+		fractionLength+=0.01;
+	}
+	else if(keyPressed == true && key == 's')
+	{
+		fractionLength-=0.01;
+	}
 }
